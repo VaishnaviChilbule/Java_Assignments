@@ -1,16 +1,18 @@
-package assignment_1;
+//2. Write a program to accept two integers x and n and compute x raised to n.
+package assignment_2;
 import java.util.Scanner;
+import java.math.*;
 public class Q_2 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int number_1,number_2,sum;
+	public static void main(String[] args) 
+	{
+		int x,n,power_num;
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter two numbers");
-		number_1=sc.nextInt();
-		number_2=sc.nextInt();
-		sum=number_1+number_2;
-		System.out.println("Sum is:"+sum);
+		System.out.println("enter the value of x & n:");
+		x=sc.nextInt();
+		n=sc.nextInt();
+		power_num=(int) Math.pow(x,n);
+		System.out.println("x raised to n is :"+power_num);
 		
 	}
 

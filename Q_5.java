@@ -1,20 +1,21 @@
-package assignment_1;
-
+//Write a program to calculate factors of a given number.
+package assignment_2;
 import java.util.Scanner;
-
 public class Q_5 {
 
-	public static void main(String[] args) {
-		int number_1;
-		Scanner sc= new Scanner(System.in);
-		System.out.println("enter any number:");
-		number_1=sc.nextInt();
-		if ((number_1%5==0)&&(number_1%7==0)) {
-			System.out.println("number is divisible by 5 & 7");
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int input_num;
+		System.out.println("enter the number:");
+		input_num=sc.nextInt();
+		for(int i=1;i<=input_num;i++) {
+			if (input_num%i==0) {
+				System.out.print(i+" ");
+			}
 		}
-		else {
-			System.out.println("number is not divisible by 5 & 7");
-		}
+		
+
 	}
 
 }

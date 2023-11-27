@@ -1,28 +1,33 @@
-package assignment_1;
+//Accept two numbers and calculate GCD of them.
+package assignment_2;
 import java.util.Scanner;
 public class Q_6 {
 
-	public static void main(String[] args)
+	public static void main(String[] args) 
 	{
-		
-	 float basic_sal;
-	 double tax =0,in_hand_sal;
-	 Scanner sc=new Scanner(System.in);
-	 System.out.println("enter your Basic salary:");
-	 basic_sal=sc.nextFloat();
-	 if (basic_sal<150000) {
-	  	tax=0;
-	 }
-	 else if((150000<basic_sal)&&(basic_sal<300000)) {
-	 	tax= basic_sal*(0.20);
-	 }
-	 else if(basic_sal>300000) {
-	 	tax= basic_sal*(0.30);
-	 }
-	 else
-	 	System.out.println("Enter valid value");
-	  in_hand_sal=basic_sal-tax;
-	  System.out.println("Salary after tax cutting is: "+in_hand_sal);
-	}
-    
+		Scanner sc=new Scanner(System.in);
+		int num1,num2,GCD=0;
+		System.out.println("enter the two numbers:");
+		num1=sc.nextInt();
+		num2=sc.nextInt();
+		if(num1>num2)
+		{  for(int i=1;i<=num1;i++) 
+			{   if ((num1%i==0)&&(num2%i==0))
+				{
+					GCD=i;
+				}	
+		    }
+		}
+		else {
+			for(int i=1;i<=num2;i++) 
+			{   if ((num1%i==0)&&(num2%i==0))
+				{
+					GCD=i;
+				}	
+		    }
+			
+		}
+		System.out.println("GCD of:"+num1+","+num2+"="+GCD);
+
+}
 }
